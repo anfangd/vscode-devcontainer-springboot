@@ -1,0 +1,37 @@
+version: '3'
+services:
+  openjdk:
+    build: ./openjdk
+    ports:
+      - "8080:8080"
+    command: /bin/sh -c "while :; do sleep 10; done"
+    volumes:
+      - ..:/workspace:cached
+
+  mysql:
+    image: mysql:5.7
+    container_name: "dc-db-mysql"
+    restart: always
+    environment:
+      MYSQL_DATABASE: mysqldb
+      MYSQL_ROOT_PASSWORD: mysqldb
+    ports: 
+      - 13306:3306
+    volumes:
+      - ./mysql-confd:/etc/mysql/conf.d
+
+  # postgres:
+  #   restart: always
+  #   image: postgres:alpine
+  #   container_name: "dc-db-postgres"
+  #   environment:
+  #     POSTGRES_USER: root
+  #     POSTGRES_PASSWORD: root
+  #   ports:
+  #     - 15432:5432
+
+  # redis:
+  #   image: redis:alpine
+  #   container_name: "dc-db-redis"
+  #   ports: 
+  #     - 16379:6379
