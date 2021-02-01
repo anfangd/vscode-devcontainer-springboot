@@ -4,13 +4,14 @@
 
 ```
 .
-├── ./README.md
-├── ./.devcontainer
-│   └── ./.devcontainer/devcontainer.json
-└── ./docker
-    ├── ./docker/docker-compose.yml
-    ├── ./docker/mysql-confd
-    │   └── ./docker/mysql-confd/default_authentication.cnf
-    └── ./docker/openjdk
+├── README.md
+├── .devcontainer
+│   └── devcontainer.json
+└── docker
+    ├── docker-compose.yml
+    ├── mysql-confd
+    │   └── default_authentication.cnf
+    └── openjdk
+        └── Dockerfile
         └── ./docker/openjdk/Dockerfile
 ```
