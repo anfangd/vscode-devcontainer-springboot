@@ -5,6 +5,8 @@
 ```
 .
 ├── ./README.md
+├── ./.devcontainer
+│   └── ./.devcontainer/devcontainer.json
 └── ./docker
     ├── ./docker/docker-compose.yml
     ├── ./docker/mysql-confd
