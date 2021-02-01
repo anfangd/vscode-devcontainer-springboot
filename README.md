@@ -1,4 +1,4 @@
-# VSCode devocontainer SpringBoot
+# VSCode devcontainer SpringBoot
 
 ## Directory Tree
 
